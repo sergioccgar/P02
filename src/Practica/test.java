@@ -7,7 +7,7 @@
 public class test extends Main{
 
     public static void main (String args[]) {
-        String[] contrasenas = {"holasoysergio","holaSoysergio","9","hola no soy sergio","ab9A","ab9 A123", "äa,AA.AA1", "holaSoysergio9aaaaaaaaaaaaaaaaaaa", "holaSoysergio9?", "ab9A123", "holaSoysergio9", "holaSoysergio9aaaaaaaaaaaaaaaaaa"};
+        String[] contrasenas = {"holasoysergio","holaSoysergio","9","hola no soy sergio","ab9A","ab9 A123", "äa,AA.AA1", "holaSoysergio9aaaaaaaaaaaaaaaaaaa", "holaSoysergio9?", "holaSoysergio9A", "ab9A123", "holaSoysergio9", "holaSoysergio9aaaaaaaaaaaaaaaaaa"};
         System.out.println("Contraseña - Cumple longitud - Cumple caracteres legales - Cumple al menos una minuscula - Cumple al menos una mayuscula - Cumple al menos un numero");
         System.out.println("holasoysergio                     - true - true - true - false - false");
         System.out.println("holasoySergio                     - true - true - true - true - false");
@@ -18,6 +18,7 @@ public class test extends Main{
         System.out.println("äa,AA.AA1                         - true - false - true - true - true");
         System.out.println("holaSoysergio9aaaaaaaaaaaaaaaaaaa - false - true - true - true - true");
         System.out.println("holaSoysergio9?                   - true - false - true - true - true");
+        System.out.println("holaSoysergio9A                   - true - true - true - true - true");
         System.out.println("ab9A123                           - true - true - true - true - true");
         System.out.println("holaSoysergio9                    - true - true - true - true - true");
         System.out.println("holaSoysergio9aaaaaaaaaaaaaaaaaa  - true - true - true - true - true");
