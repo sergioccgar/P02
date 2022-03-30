@@ -50,6 +50,7 @@ public class Main {
             for (char compara: minusculas.toCharArray()){
                 if (b == true) break; // Evita seguir comparando la letra ya encontrada con el resto del alfabeto
                 if (origen == compara) b = true;
+                //System.out.println(origen);
             }
         }
         return b;
@@ -68,7 +69,7 @@ public class Main {
             for (char compara: mayusculas.toCharArray()){
                 if (b == true) break; // Evita seguir comparando la letra ya encontrada con el resto del alfabeto
                 if (origen == compara) b = true;
-                System.out.println(origen);
+                //System.out.println(origen);
             }
         }
         return b;
@@ -82,8 +83,13 @@ public class Main {
     public static boolean hayNumeros(String c){
         String numeros = "0123456789";
         boolean b = false;
-        for (int i = 0; i < c.length(); i++){
-            i++;
+        for (char origen: c.toCharArray()){
+            if (b == true) break; // Evita seguir comparando cuando ya se encontró un número.
+            for (char compara: numeros.toCharArray()){
+                if (b == true) break; // Evita seguir comparando la letra ya encontrada con el resto de los dígitos.
+                if (origen == compara) b = true;
+                //System.out.println(origen);
+            }
         }
         return b;
     }
