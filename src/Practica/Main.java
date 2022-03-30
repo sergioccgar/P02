@@ -100,7 +100,9 @@ public class Main {
      * @param c Cadena a revisar como ~senha~ válida
      */
     public static String senhaValidator(String c){
-        return c;
+        if (longitudValida(c) && caracteresLegales(c) && hayMinusculas(c) && hayMayusculas(c) && hayNumeros(c)) {
+            return "Senha valida.";
+        } else return "Senha invalida.";
     }
 
     public static void main (String args[]) throws IOException {
