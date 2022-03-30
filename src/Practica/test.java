@@ -51,6 +51,8 @@ public class test extends Main{
         for (String c: contrasenas){
             System.out.println(senhaValidator(c));
         }
+        System.out.println("-----------------------------");
+        System.out.println("Comprobamos que hayMinusculas y hayMayusculas dejan de comparar cuando encuentran lo que buscan.");
         System.out.println(hayMayusculas("holaT"));
         System.out.println(hayMayusculas("holaBaaa"));
         System.out.println(hayMinusculas("holaQaaa"));
