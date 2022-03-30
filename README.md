@@ -17,3 +17,10 @@ Para ejecutar el validador de contrasenas, basta con ejecutar
 $ java Main
 
 Para salir del validador en terminal usar Ctrl+C.
+
+Al ejecutar el Main, sólo las contraseñas que cumplan lo siguiente generarán un "Senha valida." en terminal.
+- Tienen al menos una mayúscula, una minúscula y un número
+- Son de una longitud de entre 6 y 32 caracteres
+- No tienen acentos, signos de puntuación ni espacios
+
+Las demás contraseñas generarán un "Senha invalida." en terminal.
