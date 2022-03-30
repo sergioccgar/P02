@@ -40,8 +40,10 @@ public class Main {
     public static boolean hayMinusculas(String c){
         String minusculas = "abcdefghijklmnopqrstuvwxyz";
         boolean b = false;
-        for (int i = 0; i < c.length(); i++){
-            i++;
+        for (char origen: c.toCharArray()){
+            for (char compara: minusculas.toCharArray()){
+                if (origen == compara) b = true;
+            }
         }
         return b;
     }
