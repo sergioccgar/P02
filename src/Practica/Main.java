@@ -26,8 +26,13 @@ public class Main {
     public static boolean caracteresLegales(String c){
         String legales = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         boolean b = false;
-        for (int i = 0; i < c.length(); i++){
-            i++;
+        for (char origen: c.toCharArray()){
+            b = false;
+            for (char compara: legales.toCharArray()){
+                if (origen == compara) b = true;
+                if (b == true) break;
+            }
+            if (b == false) break;
         }
         return b;
     }

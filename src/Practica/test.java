@@ -7,7 +7,7 @@
 public class test extends Main{
 
     public static void main (String args[]) {
-        String[] contrasenas = {"holasoysergio","holaSoysergio","9","hola no soy sergio","ab9A","ab9 A123", "äa,AA.AA1", "holaSoysergio9aaaaaaaaaaaaaaaaaaa","ab9A123", "holaSoysergio9", "holaSoysergio9aaaaaaaaaaaaaaaaaa"};
+        String[] contrasenas = {"holasoysergio","holaSoysergio","9","hola no soy sergio","ab9A","ab9 A123", "äa,AA.AA1", "holaSoysergio9aaaaaaaaaaaaaaaaaaa", "holaSoysergio9?", "ab9A123", "holaSoysergio9", "holaSoysergio9aaaaaaaaaaaaaaaaaa"};
         System.out.println("Contraseña - Cumple longitud - Cumple caracteres legales - Cumple al menos una minuscula - Cumple al menos una mayuscula - Cumple al menos un numero");
         System.out.println("holasoysergio                     - true - true - true - false - false");
         System.out.println("holasoySergio                     - true - true - true - true - false");
@@ -15,8 +15,9 @@ public class test extends Main{
         System.out.println("hola no soy sergio                - true - false - true - false - false");
         System.out.println("ab9A                              - false - true - true - true - true");
         System.out.println("ab9 A123                          - true - false - true - false - false");
-        System.out.println("äa,AA.AA1                         - true - fase - true - true - true");
+        System.out.println("äa,AA.AA1                         - true - false - true - true - true");
         System.out.println("holaSoysergio9aaaaaaaaaaaaaaaaaaa - false - true - true - true - true");
+        System.out.println("holaSoysergio9?                   - true - false - true - true - true");
         System.out.println("ab9A123                           - true - true - true - true - true");
         System.out.println("holaSoysergio9                    - true - true - true - true - true");
         System.out.println("holaSoysergio9aaaaaaaaaaaaaaaaaa  - true - true - true - true - true");
@@ -25,7 +26,7 @@ public class test extends Main{
             System.out.println(longitudValida(c));
         }
         System.out.println("-----------------------------");
-        System.out.println("En los siguientes casos se revisa que no haya caracteres ilegales en la contraseña");
+        System.out.println("En los siguientes casos se revisa que sólo haya caracteres legales en la contraseña");
         for (String c: contrasenas){
             System.out.println(caracteresLegales(c));
         }
