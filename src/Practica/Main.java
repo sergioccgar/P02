@@ -46,10 +46,11 @@ public class Main {
         String minusculas = "abcdefghijklmnopqrstuvwxyz";
         boolean b = false;
         for (char origen: c.toCharArray()){
+            if (b == true) break; // Evita seguir comparando cuando ya se encontró una minúscula.
             for (char compara: minusculas.toCharArray()){
+                if (b == true) break; // Evita seguir comparando la letra ya encontrada con el resto del alfabeto
                 if (origen == compara) b = true;
             }
-            if (b == true) break; // Evita seguir comparando cuando ya se encontró una minúscula.
         }
         return b;
     }
@@ -62,8 +63,13 @@ public class Main {
     public static boolean hayMayusculas(String c){
         String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         boolean b = false;
-        for (int i = 0; i < c.length(); i++){
-            i++;
+        for (char origen: c.toCharArray()){
+            if (b == true) break; // Evita seguir comparando cuando ya se encontró una mayúscula.
+            for (char compara: mayusculas.toCharArray()){
+                if (b == true) break; // Evita seguir comparando la letra ya encontrada con el resto del alfabeto
+                if (origen == compara) b = true;
+                System.out.println(origen);
+            }
         }
         return b;
     }

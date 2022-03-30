@@ -14,7 +14,7 @@ public class test extends Main{
         System.out.println("9                                 - false - true - false - false - true");
         System.out.println("hola no soy sergio                - true - false - true - false - false");
         System.out.println("ab9A                              - false - true - true - true - true");
-        System.out.println("ab9 A123                          - true - false - true - false - false");
+        System.out.println("ab9 A123                          - true - false - true - true - false");
         System.out.println("äa,AA.AA1                         - true - false - true - true - true");
         System.out.println("holaSoysergio9aaaaaaaaaaaaaaaaaaa - false - true - true - true - true");
         System.out.println("holaSoysergio9?                   - true - false - true - true - true");
@@ -51,5 +51,9 @@ public class test extends Main{
         for (String c: contrasenas){
             System.out.println(senhaValidator(c));
         }
+        System.out.println(hayMayusculas("holaT"));
+        System.out.println(hayMayusculas("holaBaaa"));
+        System.out.println(hayMinusculas("holaQaaa"));
+
     }
 }
