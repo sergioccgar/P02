@@ -49,6 +49,7 @@ public class Main {
             for (char compara: minusculas.toCharArray()){
                 if (origen == compara) b = true;
             }
+            if (b == true) break; // Evita seguir comparando cuando ya se encontró una minúscula.
         }
         return b;
     }
